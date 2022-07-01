@@ -2,30 +2,51 @@
   import landing_photo from "../src/assets/landing_photo.png";
   import next_icon from "../src/assets/icons/next_icon.png";
   import chess_icon from "../src/assets/icons/chess_icon.png";
+
+  import SecondPage from "./SecondPage.svelte";
+
+  let secondPage = false;
+
+  function setSecondPage() {
+    secondPage = !secondPage
+  }
+
 </script>
 
 <div class="wrapper">
-  <div class="left-side">
-    <div class="indigo-cup">
-      <span>
-        <img src={chess_icon} alt="chess_icon">
-        Redberry Knight Cup</span>
+
+  {#if secondPage}
+    <SecondPage />
+
+  {:else}
+    <div class="left-side">
+      <div class="indigo-cup">
+        <span>
+          <img src={chess_icon} alt="chess_icon">
+          Redberry Knight Cup</span>
+      </div>
     </div>
-  </div>
-  <div class="right-side">
-    <div class="big-text">
-      chess says
-      <span>a lot about</span>
-      <br />
-      who we are
+    <div class="right-side">
+      <div class="big-text">
+        chess says
+        <span>a lot about</span>
+        <br />
+        who we are
+      </div>
+      <button
+        on:click={setSecondPage}
+        class="start_btn"
+        >
+        <span>Get Started</span>
+        <img src={next_icon} alt="next_icon"/>
+      </button>
     </div>
-    <button
-      class="start_btn"
-      >
-      <span>Get Started</span>
-      <img src={next_icon} alt="next_icon" />
-    </button>
-  </div>
+
+
+  {/if}
+
+
+
 </div>
 
 <style>
