@@ -53,7 +53,6 @@
   .left-side {
     background: url("../src/assets/landing_photo.png");
     background-size: cover;
-    background-color: gray;
     width: 100%;
   }
 
