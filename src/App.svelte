@@ -8,22 +8,20 @@
   let secondPage = false;
 
   function setSecondPage() {
-    secondPage = !secondPage
+    secondPage = !secondPage;
   }
-
 </script>
 
-<div class="wrapper">
-
-  {#if secondPage}
-    <SecondPage />
-
-  {:else}
+{#if secondPage}
+  <SecondPage />
+{:else}
+  <div class="wrapper">
     <div class="left-side">
       <div class="indigo-cup">
         <span>
-          <img src={chess_icon} alt="chess_icon">
-          Redberry Knight Cup</span>
+          <img src={chess_icon} alt="chess_icon" />
+          Redberry Knight Cup</span
+        >
       </div>
     </div>
     <div class="right-side">
@@ -33,21 +31,13 @@
         <br />
         who we are
       </div>
-      <button
-        on:click={setSecondPage}
-        class="start_btn"
-        >
+      <button on:click={setSecondPage} class="start_btn">
         <span>Get Started</span>
-        <img src={next_icon} alt="next_icon"/>
+        <img src={next_icon} alt="next_icon" />
       </button>
     </div>
-
-
-  {/if}
-
-
-
-</div>
+  </div>
+{/if}
 
 <style>
   @font-face {
@@ -57,7 +47,7 @@
 
   @font-face {
     font-family: "Open Sans";
-    src: url("../src/assets/fonts/OpenSans/OpenSans-Regular.ttf")
+    src: url("../src/assets/fonts/OpenSans/OpenSans-Regular.ttf");
   }
 
   :global(body) {
@@ -127,5 +117,4 @@
     font-family: "Open Sans";
     font-size: 15px;
   }
-
 </style>

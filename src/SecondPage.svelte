@@ -17,6 +17,7 @@
         </div>
         <div class="name">- emanuel lasker</div>
     </div>
+
     <div class="right-side">
         <div class="top_div">
             <p>Start creating your account</p>
@@ -39,6 +40,9 @@
                 <img src={next_icon} alt="next_icon" />
             </button>
         </div>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, iste amet commodi vitae quos, fugit odit veritatis quisquam consequatur accusantium non nulla labore dolor, veniam enim iure error voluptatibus omnis velit facilis modi optio rem cum in. Doloribus ex nam reiciendis iste doloremque dolor sed alias dicta vel ab et, consequuntur aliquid quia est fuga vero. Ipsa at enim fugit ea? Expedita suscipit earum velit quo nam ad quod inventore placeat perspiciatis non deleniti vel debitis vero exercitationem fugiat minima, officiis consequuntur. Temporibus, illo non fugiat aut voluptate molestiae cum pariatur voluptatibus, doloremque nihil soluta iste praesentium hic culpa. Suscipit?</div>
+
     </div>
 </div>
 
@@ -56,20 +60,33 @@
     :global(body) {
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
 
     .wrapper {
         display: flex;
         width: 100%;
-        height: 100vh;
+        background-color: aqua;
     }
 
     .left-side {
         background: url("../src/assets/second_page.png");
         background-size: cover;
-        width: 100%;
+        width: 50%;
+        height: auto;
+        background-color: #95939a;
+        
     }
 
+    .right-side {
+        width: 50%;
+        background-color: white;
+        padding-top: 1rem;
+        padding-left: 3rem;
+        position: relative;
+        font-family: "Open Sans";
+        font-weight: 600;
+    }
     .indigo-cup {
         background-color: #7025fb;
         height: 84px;
@@ -83,16 +100,6 @@
         color: white;
         font-size: 1.3rem;
         font-family: "Nunito";
-    }
-
-    .right-side {
-        width: 100%;
-        background-color: white;
-        padding-top: 1rem;
-        padding-left: 3rem;
-        position: relative;
-        font-family: "Open Sans";
-        font-weight: 600;
     }
 
     .text {
@@ -116,6 +123,7 @@
         color: white;
         font-weight: 100;
     }
+    
     .title {
         text-align: center;
         width: 100%;
@@ -172,9 +180,8 @@
         display: flex;
         justify-content: space-between;
         max-width: 750px;
-        margin-top: 4rem;
+        margin: 4rem auto;
     }
-
 
     .next {
         background-color: #212529;
